@@ -8,7 +8,7 @@ import keyboard
 def CookieScrapper():
     webbrowser.open("https://bard.google.com")
     sleep(2)
-    pyautogui.click(x=1741, y=5)
+    pyautogui.click(x=1741, y=50)
     sleep(1)
     pyautogui.click(x=1570, y=243)
     sleep(1)
