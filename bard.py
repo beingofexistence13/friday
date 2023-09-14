@@ -8,18 +8,33 @@ from time import sleep
 import  json
 import keyboard
 
+cookie_dict = {
+    "__Secure-1PSID":"awjpc78-pBVnngqICnsMnl49b3IifcS23WOl8FjnnyhOKOhumLha7wDR2KkT9o8VJNeYBa.",
+    "__Secure-1PSIDTS":"sidts-CjIBSAxbGaMg6qpTVegRSnnQ5Ajjr085UW9B_CP2hRG45ssmD3040Eaz0kmiPITM_LA93RAA",
+    "__Secure-1PSIDCC":"APoG2W855-2gQfY7mpjEx7AAmRNC9vAxDBSA5nXwfGTdOdZ1Z5vPNvmrANUKsscGNeuGNpL0"
+}
 def CookieScrapper():
     webbrowser.open("https://bard.google.com")
     sleep(2)
-    pyautogui.click(x=1741, y=50)
+    pyautogui.click(x=1737, y=50)
     sleep(1)
-    pyautogui.click(x=1570, y=243)
-    sleep(1)
-    pyautogui.click(x=1521, y=78)
+    pyautogui.click(x=1559, y=75)
     sleep(1)
     keyboard.press_and_release('ctrl + w')
 
     data = pyperclip.paste()
+    current_datetime = datetime.datetime.now()
+    formatted_time = current_datetime.strftime("%H%M%S")
+    filenamedate = str("cookie_") + str(formatted_time) + str(".txt")
+    filenamedate = "database//" + filenamedate
+    def cookie_data(data, filename):
+        # paragraphs = data.split('\n\n')
+        with open(filename, 'w') as file:
+            file.write(data)
+        # data = paragraphs[:2]
+        # separator = ', '
+        # joined_string = separator.join(data)
+        # return joined_string
 
     try:
         json_data = json.loads(data)
@@ -56,15 +71,18 @@ def CookieScrapper():
         "__Secure-1PSIDTS": TSValue,
         "__Secure-1PSIDCC": CCValue,
     }
+    print(cookie_data(data, filename=filenamedate))
 
     return cookie_dict
-# cookie_dict = {
-#     "__Secure-1PSID":"awjpc78-pBVnngqICnsMnl49b3IifcS23WOl8FjnnyhOKOhumLha7wDR2KkT9o8VJNeYBA.",
-#     "__Secure-1PSIDTS":"sidts-CjIBSAxbGaMg6qpTVegRSnnQ5Ajjr085UW9B_CP2hRG45ssmD3040Eaz0kmiPITM_LA93RAA",
-#     "__Secure-1PSIDCC":"APoG2W855-2gQfY7mpjEx7AAmRNC9vAxDBSA5nXwfGTdOdZ1Z5vPNvmrANUKsscGNeuGNpL0"
-# }
-cookie_dict = CookieScrapper()
-bard = BardCookies(cookie_dict=cookie_dict)
+
+try:
+    bard = BardCookies(cookie_dict=cookie_dict)
+except Exception as e:
+    cookie_dict = CookieScrapper()
+    bard = BardCookies(cookie_dict=cookie_dict)
+    print("Yes, there is a cookie error:", str(e),"And Using CookieScrapper!!!")
+else:
+    print("NO, no no.. there are no errors :) All Set To Your Query")
 
 # Text Modification Function -
 def split_and_save_paragraphs(data, filename):
@@ -86,5 +104,6 @@ while True:
     filenamedate = str(formatted_time) + str(".txt")
     filenamedate = "database//" + filenamedate
     print(split_and_save_paragraphs(results, filename=filenamedate))
+
 
 

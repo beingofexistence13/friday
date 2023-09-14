@@ -1,0 +1,8 @@
+def cookie_data(data, filename):
+    paragraphs = data.split('\n\n')
+    with open(filename, 'w') as file:
+        file.write(data)
+    data = paragraphs[:2]
+    separator = ', '
+    joined_string = separator.join(data)
+    return joined_string
