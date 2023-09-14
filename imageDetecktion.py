@@ -19,7 +19,6 @@ from bardapi import BardCookies
 import datetime
 # pip install bardapi datetime
 
-
 # Specify the filename
 filename_json = 'bardCookie.json'
 
