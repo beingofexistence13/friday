@@ -1,0 +1,27 @@
+JSON stands for JavaScript Object Notation. It is a lightweight data-interchange format that uses human-readable text to store and transmit data objects consisting of attribute–value pairs and arrays (or other serializable values). It is a common data format with diverse uses in electronic data interchange, including that of web applications with servers.
+
+JSON is language-independent, but it is based on a subset of the JavaScript Programming Language Standard ECMA-262 3rd Edition - December 1999. This makes it easy for programmers to read and write JSON data, regardless of the programming language they are using.
+
+JSON data is typically stored in files with the .json extension. It can also be transmitted over a network in HTTP requests and responses.
+
+JSON is a popular choice for data interchange because it is easy to read and write, both for humans and machines. It is also very efficient, making it ideal for transmitting data over a network.
+
+Here is an example of JSON data:
+
+```json
+{
+  "name": "John Doe",
+  "age": 30,
+  "occupation": "Software Engineer"
+}
+```
+
+This JSON data object represents a person with the name John Doe, age 30, and occupation Software Engineer.
+
+JSON is used in a variety of applications, including:
+
+* Web applications: JSON is often used to transmit data between web applications and servers. For example, a web application might use JSON to send a user's profile information to the server when they log in.
+* Mobile applications: JSON is also commonly used in mobile applications to store and transmit data. For example, a mobile app might use JSON to store a user's shopping cart or to transmit user preferences to the server.
+* APIs: JSON is a popular format for APIs, which are interfaces that allow different applications to communicate with each other. For example, a weather API might return JSON data containing the current weather conditions for a given location.
+
+JSON is a versatile and powerful data format that is used in a wide variety of applications. It is easy to use, efficient, and language-independent, making it a popular choice for data interchange.

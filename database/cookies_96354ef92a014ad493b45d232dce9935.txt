@@ -1,0 +1,15 @@
+# Get data from clipboard
+data = pyperclip.paste()
+
+# Generate a unique filename
+filename = f'cookies_{uuid.uuid4().hex}.txt'
+
+# Create 'database' directory if it doesn't exist
+if not os.path.exists('database'):
+    os.makedirs('database')
+
+# Create the unique file in the 'database' directory
+with open(os.path.join('database', filename), 'w') as f:
+    f.write(data)
+
+print(f'Data written to file: {filename}')
