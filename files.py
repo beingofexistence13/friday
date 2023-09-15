@@ -2,11 +2,6 @@ import os
 import re
 
 # Original dictionary
-# data = {
-#     "Personal Assistant": "J.A.R.V.I.S. functions as Tony Stark's assistant, running and taking care of all the internal systems of Stark's buildings and the Iron Man suits.",
-#     "Control Iron Man Armor": "J.A.R.V.I.S. controls Tony Stark's Iron Man and Hulkbuster armor.",
-#     "Data Analysis": "J.A.R.V.I.S. provides valuable information during combat, giving advice on the armor's status and on the enemy's weak points."
-# }
 data = {
         "Personal Assistant": "J.A.R.V.I.S. functions as Tony Stark's assistant, running and taking care of all the internal systems of Stark's buildings and the Iron Man suits."
     ,
@@ -152,7 +147,7 @@ for dir_name, file_content in data.items():
         f.write("# " +  file_content + "\n")
 
 # Original sentence
-sentence = "This is a Test Sentence."
+sentence = "Sir, your files and folders are created successfully!!!"
 # Replace whitespace with underscores
 sentence = re.sub(r'\s', '_', sentence)
 # Convert to lowercase
