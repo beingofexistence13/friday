@@ -150,7 +150,7 @@ for i, (dir_name, file_content) in enumerate(data.items()):
 # Delete directories and files
 for i, (dir_name, file_content) in enumerate(data.items()):
         # Replace whitespace with underscores and convert to lowercase for the directory name
-    dir_name = re.sub(r'\s', '_', dir_name).lower() + '_' + str(i)
+    dir_name = re.sub(r'\s', '_', dir_name).lower() + '(' + str(i) + ')'
     
     if not os.path.exists(dir_name):
         os.makedirs(dir_name)
