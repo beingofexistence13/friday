@@ -249,6 +249,25 @@ for key, value in data.items():
     print(f"Value: {value}\n")
 
 
+# import os
+
+# # List of directory names
+# dir_names = ['dir1', 'dir2', 'dir3']
+
+# # List of file names
+# file_names = ['file1.txt', 'file2.txt', 'file3.txt']
+
+# # Create directories
+# for dir_name in dir_names:
+#     os.makedirs(dir_name)
+
+# # Create files in each directory
+# for dir_name in dir_names:
+#     for file_name in file_names:
+#         with open(os.path.join(dir_name, file_name), 'w') as f:
+#             f.write('Hello, World!')
+
+
 import os
 
 # List of directory names
@@ -259,10 +278,12 @@ file_names = ['file1.txt', 'file2.txt', 'file3.txt']
 
 # Create directories
 for dir_name in dir_names:
-    os.makedirs(dir_name)
+    if not os.path.exists(dir_name):
+        os.makedirs(dir_name)
 
-# Create files in each directory
+# Create or append to files in each directory
 for dir_name in dir_names:
     for file_name in file_names:
-        with open(os.path.join(dir_name, file_name), 'w') as f:
-            f.write('Hello, World!')
+        with open(os.path.join(dir_name, file_name), 'a') as f:
+            f.write('Hello, World!\n')
+
