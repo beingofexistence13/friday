@@ -134,33 +134,33 @@ data = {
 }
 
 # Create directories and files
-for i, (dir_name, file_content) in enumerate(data.items()):
+for i, (key, value) in enumerate(data.items()):
     # Replace whitespace with underscores and convert to lowercase for the directory name
-    dir_name = re.sub(r'\s', '_', dir_name).lower() + '(' + str(i) + ')'
+    dir_name = re.sub(r'\s', '_', key).lower() + '(' + str(i) + ')'
     
     if not os.path.exists(dir_name):
         os.makedirs(dir_name)
     
     # Replace whitespace with underscores and convert to lowercase for the file name
-    file_name = re.sub(r'\s', '_', dir_name).lower() + '.md'
+    file_name = re.sub(r'\s', '_', key).lower() + '.md'
     
     with open(os.path.join(dir_name, file_name), 'a', encoding='utf-8') as f:
-        f.write("# " + file_content + "\n")
+        f.write("# " + value + "\n")
 
 # Delete directories and files
-for i, (dir_name, file_content) in enumerate(data.items()):
-        # Replace whitespace with underscores and convert to lowercase for the directory name
-    dir_name = re.sub(r'\s', '_', dir_name).lower() + '(' + str(i) + ')'
+# for i, (dir_name, file_content) in enumerate(data.items()):
+#         # Replace whitespace with underscores and convert to lowercase for the directory name
+#     dir_name = re.sub(r'\s', '_', dir_name).lower() + '(' + str(i) + ')'
     
-    if not os.path.exists(dir_name):
-        os.makedirs(dir_name)
+#     if not os.path.exists(dir_name):
+#         os.makedirs(dir_name)
     
-    # Replace whitespace with underscores and convert to lowercase for the file name
-    file_name = re.sub(r'\s', '_', dir_name).lower() + '.md'
-    if os.path.exists(os.path.join(dir_name, file_name)):
-        os.remove(os.path.join(dir_name, file_name))
-    if os.path.exists(dir_name):
-        shutil.rmtree(dir_name)
+#     # Replace whitespace with underscores and convert to lowercase for the file name
+#     file_name = re.sub(r'\s', '_', dir_name).lower() + '.md'
+#     if os.path.exists(os.path.join(dir_name, file_name)):
+#         os.remove(os.path.join(dir_name, file_name))
+#     if os.path.exists(dir_name):
+#         shutil.rmtree(dir_name)
 
 # Notification
 sentence = "Sir, your files and folders are modified successfully!!!"

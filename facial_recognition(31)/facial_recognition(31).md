@@ -1,7 +1,0 @@
-# E.D.I.T.H. can perform facial recognition
-# E.D.I.T.H. can perform facial recognition
-# E.D.I.T.H. can perform facial recognition
-# E.D.I.T.H. can perform facial recognition
-# E.D.I.T.H. can perform facial recognition
-# E.D.I.T.H. can perform facial recognition
-# E.D.I.T.H. can perform facial recognition
