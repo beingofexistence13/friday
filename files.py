@@ -160,13 +160,11 @@ for key in data.items():
 
 # Create or append to files in each directory
 for key in data.items():
-    for key,value in data.items():
-        # Original Directory Names
-        dir_names = key
-        # Replace whitespace with underscores
-        dir_names = re.sub(r'\s', '_', dir_names)
-        # Convert to lowercase
-        dir_names = dir_names.lower()
+    dir_names = key
+    dir_names = re.sub(r'\s', '_', dir_names)
+    dir_names = dir_names.lower()
+
+    for value in data.items():
         file_name = f"{dir_names}.md"
         with open(os.path.join(dir_names, file_name), 'a') as f:
             f.write('\n Hello, World!\n')
