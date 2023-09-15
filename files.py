@@ -1,5 +1,6 @@
 import os
 import re
+import shutil
 
 # Original dictionary
 data = {
@@ -133,35 +134,9 @@ data = {
 }
 
 # Create directories and files
-# for dir_name, file_content in data.items():
-#     # Replace whitespace with underscores and convert to lowercase for the directory name
-#     dir_name = re.sub(r'\s', '_', dir_name).lower()
-    
-#     if not os.path.exists(dir_name):
-#         os.makedirs(dir_name)
-    
-#     # Replace whitespace with underscores and convert to lowercase for the file name
-#     file_name = re.sub(r'\s', '_', dir_name).lower() + '.md'
-    
-#     with open(os.path.join(dir_name, file_name), 'a', encoding='utf-8') as f:
-#         # f.write("")
-#         f.write("# " +  file_content + "\n")
-
-
-# import os
-# import re
-
-# # Original dictionary
-# data = {
-#     "Personal Assistant": "J.A.R.V.I.S. functions as Tony Stark's assistant, running and taking care of all the internal systems of Stark's buildings and the Iron Man suits.",
-#     "Control Iron Man Armor": "J.A.R.V.I.S. controls Tony Stark's Iron Man and Hulkbuster armor.",
-#     "Data Analysis": "J.A.R.V.I.S. provides valuable information during combat, giving advice on the armor's status and on the enemy's weak points."
-# }
-
-# Create directories and files
 for i, (dir_name, file_content) in enumerate(data.items()):
     # Replace whitespace with underscores and convert to lowercase for the directory name
-    dir_name = re.sub(r'\s', '_', dir_name).lower() + '_' + str(i)
+    dir_name = re.sub(r'\s', '_', dir_name).lower() + '(' + str(i) + ')'
     
     if not os.path.exists(dir_name):
         os.makedirs(dir_name)
@@ -169,16 +144,26 @@ for i, (dir_name, file_content) in enumerate(data.items()):
     # Replace whitespace with underscores and convert to lowercase for the file name
     file_name = re.sub(r'\s', '_', dir_name).lower() + '.md'
     
-    with open(os.path.join(dir_name, file_name), 'w', encoding='utf-8') as f:
-        f.write("\n" + file_content + "\n")
+    with open(os.path.join(dir_name, file_name), 'a', encoding='utf-8') as f:
+        f.write("# " + file_content + "\n")
 
+# Delete directories and files
+for i, (dir_name, file_content) in enumerate(data.items()):
+        # Replace whitespace with underscores and convert to lowercase for the directory name
+    dir_name = re.sub(r'\s', '_', dir_name).lower() + '_' + str(i)
+    
+    if not os.path.exists(dir_name):
+        os.makedirs(dir_name)
+    
+    # Replace whitespace with underscores and convert to lowercase for the file name
+    file_name = re.sub(r'\s', '_', dir_name).lower() + '.md'
+    if os.path.exists(os.path.join(dir_name, file_name)):
+        os.remove(os.path.join(dir_name, file_name))
+    if os.path.exists(dir_name):
+        shutil.rmtree(dir_name)
 
-# Original sentence
-sentence = "Sir, your files and folders are created successfully!!!"
-# Replace whitespace with underscores
-# sentence = re.sub(r'\s', '_', sentence)
-# Convert to lowercase
-# sentence = sentence.lower()
+# Notification
+sentence = "Sir, your files and folders are modified successfully!!!"
 print(sentence)
 
 
