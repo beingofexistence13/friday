@@ -88,7 +88,7 @@ data = {
         "Artificial Tactical Intelligence": "E.D.I.T.H. is capable of providing artificial tactical intelligence"
     ,
     
-        "Access to Tony's Protocols": "E.D.I.T.H. has access to all of Tony Stark's protocols"
+        "Access to Protocols": "E.D.I.T.H. has access to all of Tony Stark's protocols"
     ,
     
         "Control of Stark Industries' Global Satellite Network": "E.D.I.T.H. can control Stark Industries' global satellite network  "
@@ -134,29 +134,30 @@ data = {
 }
 
 # Create directories and files
-for i, (key, value) in enumerate(data.items()):
+for i, (dir_name, file_content) in enumerate(data.items()):
     # Replace whitespace with underscores and convert to lowercase for the directory name
-    dir_name = re.sub(r'\s', '_', key).lower() + '(' + str(i) + ')'
+    dir_name = re.sub(r'\s', '_', dir_name).lower() + '(' + str(i) + ')'
     
     if not os.path.exists(dir_name):
         os.makedirs(dir_name)
     
     # Replace whitespace with underscores and convert to lowercase for the file name
-    file_name = re.sub(r'\s', '_', key).lower() + '.md'
+    file_name = 'readme.md'
     
     with open(os.path.join(dir_name, file_name), 'a', encoding='utf-8') as f:
-        f.write("# " + value + "\n")
+        f.write("# " + file_content + "\n")
 
 # Delete directories and files
 # for i, (dir_name, file_content) in enumerate(data.items()):
-#         # Replace whitespace with underscores and convert to lowercase for the directory name
+#     # Replace whitespace with underscores and convert to lowercase for the directory name
+#     dir_name = re.sub(r'tony\'s', '', dir_name)
 #     dir_name = re.sub(r'\s', '_', dir_name).lower() + '(' + str(i) + ')'
     
 #     if not os.path.exists(dir_name):
 #         os.makedirs(dir_name)
     
 #     # Replace whitespace with underscores and convert to lowercase for the file name
-#     file_name = re.sub(r'\s', '_', dir_name).lower() + '.md'
+#     file_name = 'readme.md'
 #     if os.path.exists(os.path.join(dir_name, file_name)):
 #         os.remove(os.path.join(dir_name, file_name))
 #     if os.path.exists(dir_name):
