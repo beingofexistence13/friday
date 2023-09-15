@@ -285,5 +285,17 @@ for dir_name in dir_names:
 for dir_name in dir_names:
     for file_name in file_names:
         with open(os.path.join(dir_name, file_name), 'a') as f:
-            f.write('Hello, World!\n')
+            f.write('\n Hello, World!\n')
+import re
+
+# Original sentence
+sentence = "This is a Test Sentence."
+
+# Replace whitespace with underscores
+sentence = re.sub(r'\s', '_', sentence)
+
+# Convert to lowercase
+sentence = sentence.lower()
+
+print(sentence)
 
