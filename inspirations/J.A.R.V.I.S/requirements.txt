@@ -9,7 +9,6 @@ decorator
 future
 geocoder
 idna
-jsonlib-python3
 loc
 MouseInfo
 Pillow

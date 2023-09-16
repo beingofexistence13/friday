@@ -3,7 +3,7 @@ import pyttsx3
 import json
 import speech_recognition as sr
 
-data = json.load(open('data.json'))
+data = json.load(open('inspirations\J.A.R.V.I.S\data.json'))
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[0].id)

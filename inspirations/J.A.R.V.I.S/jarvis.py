@@ -253,6 +253,7 @@ if __name__ == '__main__':
     names = ['','Gaurav']  #names, leave first empty bcz counter starts from 0
 
 
+
     cam = cv2.VideoCapture(0, cv2.CAP_DSHOW) #cv2.CAP_DSHOW to remove warning
     cam.set(3, 640) # set video FrameWidht
     cam.set(4, 480) # set video FrameHeight

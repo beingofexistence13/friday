@@ -13,7 +13,7 @@ engine = pyttsx3.init()
 voices = engine.getProperty('voices')
 engine.setProperty('voice', voices[0].id)
 g = geocoder.ip('me')
-data = json.load(open('data.json'))
+data = json.load(open('inspirations\J.A.R.V.I.S\data.json'))
 
 def speak(audio) -> None:
         engine.say(audio)
