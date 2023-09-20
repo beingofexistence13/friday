@@ -1,0 +1,12 @@
+{
+  "name": "friday",
+  "version": "1.0.0",
+  "description": "Sure, here are 30 tasks that J.A.R.V.I.S. can do:",
+  "main": "github_repo.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
