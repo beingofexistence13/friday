@@ -1,9 +1,4 @@
-Here's a description for the GitHub repository "Firday":
-
 **Firday: Your Personal AI Friend**
-
-Firday is an advanced AI assistant designed to work seamlessly across various platforms, including websites and apps. Its capabilities extend beyond those of traditional AI assistants like Alexa, Google Assistant, and Siri.
-
 Key Features:
 - **Universal Compatibility**: Firday is designed to function across multiple platforms, providing assistance wherever you need it.
 - **Personalized Experience**: Firday not only recognizes its master but also their family members, friends, and relatives, offering a truly personalized user experience.
@@ -14,21 +9,7 @@ Key Features:
 
 Please note that this is a high-level overview. For more detailed information, please refer to the repository's README or other documentation. Enjoy exploring Firday! 😊
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Sure, here are 30 tasks that J.A.R.V.I.S. can do:
+Friday can do:
 
 | Task                                   | Description                                                                                                                                        |
 | -------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -57,9 +38,6 @@ Sure, here are 30 tasks that J.A.R.V.I.S. can do:
 | 23. Multimodal Capabilities            | It can handle multiple tasks in a single query².                                                                                                   |
 | 24. Collaborative System               | It connects to multiple AI models and responds with a final result².                                                                               |
 | 25. Personalized AI Assistant Creation | You can train an AI chatbot and create a personalized AI assistant².                                                                               |
-
-Sure, here's the information about E.D.I.T.H.'s capabilities in a table:
-
 | Capability                                            | Description                                                         |
 | ----------------------------------------------------- | ------------------------------------------------------------------- |
 | Augmented Reality Security                            | E.D.I.T.H. provides augmented reality security                      |
@@ -72,10 +50,6 @@ Sure, here's the information about E.D.I.T.H.'s capabilities in a table:
 | Real-time Information Retrieval                       | It can provide real-time information retrieval                      |
 | Communication                                         | E.D.I.T.H. can facilitate communication                             |
 | Holographic Projection                                | It can project holographic images                                   |
-
-Please note that while E.D.I.T.H. is a powerful AI, it's also a fictional creation within the Marvel Cinematic Universe and its capabilities are subject to the creative direction of the filmmakers and writers.
-Sure, here's the information about F.R.I.D.A.Y.'s capabilities in a table:
-
 | Capability                  | Description                                                                                         |
 | --------------------------- | --------------------------------------------------------------------------------------------------- |
 | Personal Assistant          | F.R.I.D.A.Y. functions as Tony Stark's assistant⁵                                                   |
@@ -87,9 +61,6 @@ Sure, here's the information about F.R.I.D.A.Y.'s capabilities in a table:
 | Rescue Operations           | F.R.I.D.A.Y. helped Stark rescue a family trapped in a collapsing building⁵                         |
 | Predicting Opponent's Moves | F.R.I.D.A.Y. predicted where Captain America would hit next, allowing Iron Man to counter the blow⁵ |
 
-Please note that while F.R.I.D.A.Y. is a powerful AI, it's also a fictional creation within the Marvel Cinematic Universe and its capabilities are subject to the creative direction of the filmmakers and writers.
-
-Source: Conversation with Bing, 9/14/2023
 (1) undefined. https://marvelcinematicuniverse.fandom.com/wiki/F.R.I.D.A.Y.
 (2) F.R.I.D.A.Y. | Marvel Cinematic Universe Wiki | Fandom. https://marvelcinematicuniverse.fandom.com/wiki/F.R.I.D.A.Y..
 (3) F.R.I.D.A.Y. - Wikipedia. https://en.wikipedia.org/wiki/F.R.I.D.A.Y..
